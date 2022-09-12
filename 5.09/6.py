@@ -1,4 +1,4 @@
-# -*- coding: utf-8 -*-
+# -- coding: utf-8 --
 x = input('x: ')
 y = input('y: ')
 x, y = y, x

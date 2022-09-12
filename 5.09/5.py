@@ -1,3 +1,3 @@
-# -*- coding: utf-8 -*-
+# -- coding: utf-8 --
 n = int(input('n: '))
 print(n + n**2 + n**3 + n**4 + n**5)

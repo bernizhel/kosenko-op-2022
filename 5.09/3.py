@@ -1,4 +1,4 @@
-# -*- coding: utf-8 -*-
+# -- coding: utf-8 --
 age = int(input('Age: '))
 name = input('Name: ')
 if (0 < age < 75) and (name.lower() != 'иван'):
