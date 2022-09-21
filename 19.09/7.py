@@ -1,11 +1,9 @@
 # -- coding: utf-8 --
-def printIsLeapYear(year):
-  if ((year % 4 == 0 and year % 100 != 0) or year % 400 == 0):
-    print('Yes')
-    return
-  print('No')
+def print_is_leap_year(year):
+    if (year % 4 == 0 and year % 100 != 0) or year % 400 == 0:
+        print('Да')
+        return
+    print('Нет')
 
-printIsLeapYear(2004)
-printIsLeapYear(1999)
-printIsLeapYear(2000)
-printIsLeapYear(1900)
+
+print_is_leap_year(int(input('Year: ')))

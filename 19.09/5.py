@@ -1,5 +1,8 @@
-# -- coding: utf-8 --
-def theLeastNumber(a, b, c):
-  print(min([a, b, c]))
+# -*- coding: utf-8 -*-
 
-theLeastNumber(float(input()), float(input()), float(input()))
+def print_least_number(a, b, c):
+    print(min([a, b, c]))
+
+
+print_least_number(float(input('a: ')), float(input('b: ')),
+                   float(input('c: ')))

@@ -1,6 +1,6 @@
 # -- coding: utf-8 --
-from math import floor
 
+from math import floor
 
 seconds = int(input('Seconds: '))
 d = floor(seconds / 3600 / 24)

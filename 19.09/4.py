@@ -1,5 +1,8 @@
-# -- coding: utf-8 --
-def lacingLength(a, b, l, N):
-  print(2 * (N - 1) * (a + b) + a + l * 2)
+# -*- coding: utf-8 -*-
 
-lacingLength(5, 4, 10, 4)
+def print_lacing_length(a, b, l, N):
+    print(2 * (N - 1) * (a + b) + a + l * 2)
+
+
+print_lacing_length(int(input('a: ')), int(input('b: ')), int(input('l: ')),
+                    int(input('N: ')))
