@@ -5,4 +5,4 @@ def print_squares(n):
         print(i ** 2)
 
 
-print(int(input('N: ')))
+print_squares(int(input('N: ')))
