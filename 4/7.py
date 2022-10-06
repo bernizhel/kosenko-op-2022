@@ -1,12 +1,11 @@
 # -*- coding: utf-8 -*-
 
-from functools import reduce
-
-
 def sum_of_factorials(n):
-    total = 0
-    for i in range(1, n + 1):
-        total += reduce((lambda x, y: x * y), range(1, i + 1))
+    total = 1
+    next_factor = 1
+    for i in range(2, n + 1):
+        next_factor *= i
+        total += next_factor
     return total
 
 
