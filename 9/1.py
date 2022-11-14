@@ -18,14 +18,13 @@ def generate_matrix(rows, columns, min_value, max_value):
 def input_matrix():
     print('Generating your matrix.')
 
-    rows = int(input('Rows: '))
-    columns = int(input('Columns: '))
+    rows_and_columns = int(input('Rows and columns: '))
     min_value = int(input('Min value: '))
     max_value = int(input('Max value: '))
 
     print('Done.')
 
-    return generate_matrix(rows, columns, min_value, max_value)
+    return generate_matrix(rows_and_columns, rows_and_columns, min_value, max_value)
 
 
 def output_matrix(matrix):
