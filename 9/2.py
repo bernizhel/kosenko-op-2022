@@ -3,6 +3,38 @@
 import random
 
 
+def generate_matrix(rows, columns, min_value, max_value):
+    matrix = []
+
+    for row in range(rows):
+        matrix.append([])
+
+        for _ in range(columns):
+            matrix[row].append(random.randint(min_value, max_value))
+
+    return matrix
+
+
+def input_matrix():
+    print('Generating your matrix.')
+
+    rows = int(input('Rows: '))
+    columns = int(input('Columns: '))
+    min_value = int(input('Min value: '))
+    max_value = int(input('Max value: '))
+
+    print('Done.')
+
+    return generate_matrix(rows, columns, min_value, max_value)
+
+
+def output_matrix(matrix):
+    placeholder_length = len(str(max([max(row) for row in matrix]))) + 1
+
+    for row in matrix:
+        print(' '.join(map(lambda n: format(n, ' ' + str(placeholder_length)), row)))
+
+
 def subtract_last_row(matrix):
     last_row = matrix[-1]
     for row_index in range(len(matrix) - 1):
@@ -12,21 +44,15 @@ def subtract_last_row(matrix):
     return matrix
 
 
-def create_matrix():
-    matrix = []
-    n = random.randint(2, 5)
-    m = random.randint(2, 5)
-    for row in range(n):
-        matrix.append([])
-        for column in range(m):
-            matrix[row].append(random.randint(1, 9))
-    return matrix
+def main():
+    matrix = input_matrix()
+    print('The given matrix is:')
+    output_matrix(matrix)
+
+    matrix = subtract_last_row(matrix)
+    print('The modified matrix is:')
+    output_matrix(matrix)
 
 
-random_matrix = create_matrix()
-print('The given matrix is:')
-for random_row in random_matrix:
-    print(' '.join(map(str, random_row)))
-print('The modified matrix is:')
-for random_row in subtract_last_row(random_matrix):
-    print(' '.join(map(lambda n: f'{n:2d}', random_row)))
+if __name__ == '__main__':
+    main()
